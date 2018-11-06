@@ -1,0 +1,25 @@
+.itemlist{
+  height: 320px;
+  min-width: 180px;
+  margin: 10px;
+  text-align: center;
+}
+.itemlist__img{
+  height: 70%;
+  width: 100%;
+}
+.itemlist__img>img{
+  height: 100%;
+  width: 100%;
+}
+.itemlist__title{
+  height: 30%;
+  width: 100%;
+}
+.itemlist__title>h5{
+  font-size: 1em;
+}
+.itemlist__title>p{
+  font-size: 0.7em;
+  color: rgb(48, 47, 47);
+}

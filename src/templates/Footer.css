@@ -1,0 +1,17 @@
+footer{
+  height: 400px;
+  width: 100%;
+}
+.footer__contact_with_us{
+height: 85%;
+background-color: rgb(27, 27, 27);
+color: aliceblue;
+}
+.footer__social_networks{
+height: 15%;
+background-color: rgb(10, 10, 10);
+}
+.social_ico>img{
+  height: 100%;
+  width: 30%;
+}

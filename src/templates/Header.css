@@ -1,0 +1,17 @@
+.header_content{
+  height: 400px ;
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+  position: relative;
+}
+.header_image{
+  height: 100%;
+  width: 100%;
+}
+.header_bar{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}

@@ -1,0 +1,15 @@
+.all_heroes{
+  /* height: 500px; */
+  width: 85%;
+  padding-top: 20px;
+  margin-bottom: 150px;
+  background-image: url("../../img/home/heroesBG.jpg");
+  color: black;
+}
+.herolist{
+  height: 230px;
+  min-width: 180px;
+  margin: 10px;
+}
+
+

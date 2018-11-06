@@ -1,0 +1,23 @@
+.herolist{
+  height: 230px;
+  min-width: 180px;
+  margin: 10px;
+  text-align: center;
+}
+.herolist__img{
+  height: 80%;
+  width: 100%;
+}
+.herolist__img>img{
+  height: 100%;
+  width: auto;
+}
+.herolist__name{
+  font-size: large;
+  font-weight: 500;
+  color: aliceblue;
+  height: 20%;
+}
+.herolist:hover>.herolist__name{
+  color: rgb(212, 88, 31);
+}
