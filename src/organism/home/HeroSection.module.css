@@ -1,13 +1,19 @@
-.all_heroes{
-  /* height: 500px; */
+.section{
   width: 85%;
+  /* height: 500px; */
+  /* padding-top: 20px; */
+  margin-bottom: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.all_heroes{
   padding-top: 20px;
   margin-bottom: 150px;
-  background-image: url("../../img/home/heroesBG.jpg");
-  color: black;
+  /* background-image: url("../../img/home/heroesBG.jpg"); */
+  background-color: rgb(7, 7, 7);
 }
 .herolist{
-  height: 230px;
+  height: 60px;
   min-width: 180px;
   margin: 10px;
 }

@@ -1,0 +1,19 @@
+.film_advertising{
+  width: 100%;
+  height: 400px;
+  background-image: url('../../img/Ant_ManBG.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+  padding-top: 70px;
+}
+.trailer_adv{
+  height: 85%;
+  width: 400px;
+  /* border: 1px solid blue; */
+  margin-left: 200px;
+}
+.btn_container{
+  margin-left: 300px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import {mooves} from '../atoms/List_Of_Mooves';
+import {news} from '../atoms/List_Of_News';
 import styles from './MapForSection.module.css';
 
 function MapForSection(e){
@@ -10,10 +11,11 @@ function MapForSection(e){
       </div>
       <div className={styles.itemlist__title}>
         <h5>{item.name}</h5>
-        <p> <strong>фильм |</strong> {item.date}</p>
+        <p> <strong>{item.category}</strong> {item.date}</p>
       </div>
     </div>
   ))
 }
 
 export const mooves_list = MapForSection(mooves);
+export const news_list = MapForSection(news);

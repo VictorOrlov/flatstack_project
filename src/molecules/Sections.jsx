@@ -1,13 +1,27 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
+import Slider from "react-slick";
 import styles from './Sections.module.css'
 
-const Sections = (props) => (
-      <div className="row justify-content-md-center">
-        <span className="col-10"><h4>{props.title}</h4></span>
-        <div className={styles.section + ' ' + "row justify-content-center"}>
-          {props.children}
-        </div>
+
+
+export default class Section extends Component {
+  render() {
+    var settings = {
+      dots: false,
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      pauseOnHover: true
+    };
+    return (
+      <div className={styles.section}>
+        <h3>{this.props.title}</h3>
+        <Slider {...settings} className={styles.sliderBG}>
+          {this.props.children}
+        </Slider>
       </div>
     );
-
-export default Sections;
+  }
+}

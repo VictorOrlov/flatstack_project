@@ -16,7 +16,7 @@ class HeroSection extends Component {
   render(){
     let {isShow} = this.state;
     return (
-      <div className="row justify-content-md-center">
+      <div className={styles.section}>
         <span className="col-10"><h4>Герои</h4></span>
         <div className={styles.all_heroes + ' ' + "row justify-content-center"}>
           {firstHeroes}

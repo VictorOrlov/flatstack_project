@@ -1,7 +1,5 @@
 .herolist{
-  height: 130px;
-  min-width: 180px;
-  margin: 10px;
+  margin: auto auto;
 }
 .gradient_btn {
   position: absolute;
