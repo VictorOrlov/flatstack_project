@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
-import styles from './App.module.css';
-import Header from './templates/Header';
-import Footer from './templates/Footer';
-import Home from './pages/Home';
+import  {BrowserRouter, Route, Switch} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import HeroesPage from './pages/HeroesPage';
+import ThisHeroPage from './pages/ThisHeroPage';
+import MoovesPage from './pages/MoovesPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 class App extends Component {
   render() {
     return (
-      <div className={styles.app}>
-      <Header />
-      <Home />
-      <Footer />
-      </div> 
+      <BrowserRouter>
+          <Switch>
+            <Route path="/" component={HomePage} exact />
+            <Route path="/heroes" component={HeroesPage} exact />
+            <Route path="/heroes/:id" component={ThisHeroPage} />
+            <Route path="/films" component={MoovesPage} exact />
+            <Route component={NotFoundPage}/>
+          </Switch>
+      </BrowserRouter>
     );
   }
 }

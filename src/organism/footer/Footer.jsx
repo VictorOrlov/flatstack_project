@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import './Footer.css';
+import instagram from '../../img/footer/instagram-logo.svg';
+import vk from '../../img/footer/vk-social-logotype.svg';
+import facebook from '../../img/footer/facebook-logo-button.svg';
 
 class Footer extends Component{
   render(){
@@ -12,13 +15,13 @@ class Footer extends Component{
         <div className="footer__social_networks row m-0 justify-content-center">
           <div className="col-5 col-sm-4 col-md-2 h-50 align-self-center">
             <a href="#" className="social_ico">
-              <img src={require('../img/footer/instagram-logo.svg')} alt=""/>
+              <img src={instagram} alt=""/>
             </a>
             <a href="#" className="social_ico">
-              <img src={require('../img/footer/vk-social-logotype.svg')} alt=""/>
+              <img src={vk} alt=""/>
             </a>
             <a href="#" className="social_ico">
-              <img src={require('../img/footer/facebook-logo-button.svg')} alt=""/>
+              <img src={facebook} alt=""/>
             </a>
           </div>
         </div>

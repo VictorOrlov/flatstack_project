@@ -1,5 +1,5 @@
 .home_page{
-  background-image: url('../img/home/home_marvelBG.jpg');
+  background-image: url('../../img/home/home_marvelBG.jpg');
   background-attachment: fixed;
   -webkit-background-size: auto;
   background-size: cover;

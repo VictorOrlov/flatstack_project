@@ -1,6 +1,7 @@
 import React from 'react';
 import {mooves} from '../atoms/List_Of_Mooves';
 import {news} from '../atoms/List_Of_News';
+import {marvel_heroes} from '../atoms/hero_page_List';
 import styles from './MapForSection.module.css';
 
 function MapForSection(e){
@@ -19,3 +20,4 @@ function MapForSection(e){
 
 export const mooves_list = MapForSection(mooves);
 export const news_list = MapForSection(news);
+export const all_heroes = MapForSection(marvel_heroes);

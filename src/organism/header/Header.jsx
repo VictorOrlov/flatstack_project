@@ -1,4 +1,5 @@
 import React, {  Component } from 'react';
+import {Link} from 'react-router-dom';
 import './Header.css';
 
 class Header extends Component{
@@ -7,13 +8,13 @@ class Header extends Component{
       <header className="">
         <div className="header_content">
           <div className="header_image">
-            <img src={require('../img/header/marvel_studios.jpg')} alt=""/>
+            <img src={require('../../img/header/marvel_studios.jpg')} alt=""/>
           </div>
           <div className="header_bar">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-              <a className="navbar-brand" href="#">
-                <img src={require('../img/header/avengers_logo.png')} style={{height: 50, width: 60}} alt=""/>
-              </a>
+              <span className="navbar-brand">
+                <img src={require('../../img/header/avengers_logo.png')} style={{height: 50, width: 60}} alt=""/>
+              </span>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
@@ -21,13 +22,13 @@ class Header extends Component{
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                   <li className="nav-item ">
-                    <a className="nav-link" href="#">Главная <span className="sr-only">(current)</span></a>
+                    <Link className="nav-link" to="/">Главная <span className="sr-only">(current)</span></Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Герои</a>
+                    <Link className="nav-link" to="/heroes">Герои</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Фильмы</a>
+                    <Link className="nav-link" to="/films">Фильмы</Link>
                   </li>
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
