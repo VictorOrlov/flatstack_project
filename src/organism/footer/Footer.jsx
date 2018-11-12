@@ -14,13 +14,13 @@ class Footer extends Component{
         {/* <!-- Ссылки на соц.сети --> */}
         <div className="footer__social_networks row m-0 justify-content-center">
           <div className="col-5 col-sm-4 col-md-2 h-50 align-self-center">
-            <a href="#" className="social_ico">
+            <a href="https://www.instagram.com/marvel/?hl=ru" className="social_ico">
               <img src={instagram} alt=""/>
             </a>
-            <a href="#" className="social_ico">
+            <a href="https://vk.com/id169404441" className="social_ico">
               <img src={vk} alt=""/>
             </a>
-            <a href="#" className="social_ico">
+            <a href="https://ru-ru.facebook.com/Marvel/" className="social_ico">
               <img src={facebook} alt=""/>
             </a>
           </div>

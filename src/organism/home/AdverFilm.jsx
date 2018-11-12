@@ -15,7 +15,7 @@ const AdverFilm = () => (
         allowFullScreen></iframe>
     </div>
     <div className={styles.btn_container}>
-      <BtnParall>Узнать подробности</BtnParall>
+      <BtnParall link="/films">Узнать подробности</BtnParall>
     </div>
   </div>
 );
