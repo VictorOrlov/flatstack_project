@@ -18,11 +18,11 @@ class HeroSection extends Component {
     return (
       <div className={styles.section}>
         <span className="col-10"><h4>Герои</h4></span>
-        <div className={styles.all_heroes + ' ' + "row justify-content-center"}>
+        <div className={`${styles.all_heroes} row justify-content-center`}>
           {firstHeroes}
           {isShow && moreHeroes}
           <div className="w-100"></div>
-          <div className={styles.herolist + ' ' + "col-2"}>
+          <div className={`${styles.herolist} col-2`}>
             <BtnGrad click={this.showMoreHero}>{isShow ? "Скрыть" : "Ещё Герои"}</BtnGrad>
           </div>
         </div>

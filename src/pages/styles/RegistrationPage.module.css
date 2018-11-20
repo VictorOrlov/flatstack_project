@@ -1,0 +1,29 @@
+.main{
+  height: 500px;
+  width: 100%;
+  background-image: url('../../img/registration.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.main>form{
+  display: block;
+  margin-top: 5%;
+  background-color: white;
+  height: 45%;
+}
+.main>form>button{
+  margin-left: 40%;
+  background:rgb(37, 87, 248);
+  box-shadow:5px 5px 0 rgba(0, 0, 0, 0.26);
+  display:inline-block;
+  font-size:1em;
+  font-weight: 500;
+  color:white;
+  text-decoration:none;
+  transform: skew(-20deg);
+  border: none;
+}
+.main>form>button:hover{
+  box-shadow: 0 0 0 ;
+}

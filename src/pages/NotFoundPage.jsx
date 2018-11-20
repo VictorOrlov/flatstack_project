@@ -4,8 +4,10 @@ import BtnParall from '../atoms/BtnParall';
 
 const NotFoundPage = () => (
   <main className={styles.main_style}>
-    <h1>Гидра атакует!!! </h1>
-    <BtnParall link="/">Назад к безопасности</BtnParall>
+    <h1>Ты что тут делаешь? Иди домой!!! </h1>
+    <br />
+    <br />
+    <BtnParall link="/">Идти домой</BtnParall>
   </main>
 );
 

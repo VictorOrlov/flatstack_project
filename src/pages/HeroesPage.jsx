@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './styles/HeroesPage.module.css';
 import PageTemplate from '../templates/PageTemplate';
-import {all_heroes} from '../molecules/MapForSection';
+import {allHeroes} from '../molecules/MapForSection';
 
 const HeroesPage = () => (
   <PageTemplate>
-    <main className={styles.heroes_page + ' ' + "row justify-content-center"}>
-      {all_heroes}
+    <main className={`${styles.heroes_page} row justify-content-center`}>
+      {allHeroes}
     </main>
   </PageTemplate>
 );

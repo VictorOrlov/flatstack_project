@@ -1,9 +1,9 @@
 import React from 'react';
 import Sections from '../../molecules/Sections';
-import {mooves_list} from '../../molecules/MapForSection';
+import { mooveList } from '../../molecules/MapForSection';
 
 const MooveSection = () => (
-  <Sections title="Фильмы">{mooves_list}</Sections>
+  <Sections title="Фильмы">{mooveList}</Sections>
 );
 
 export default MooveSection;
