@@ -248,16 +248,16 @@ self.__precacheManifest = [
     "url": "/flatstack_project/static/media/avengers_logo.d4031b46.png"
   },
   {
-    "revision": "d41f55a78e6f49a5512878df1737e58a",
-    "url": "/flatstack_project/static/media/slick.d41f55a7.ttf"
-  },
-  {
     "revision": "ced611daf7709cc778da928fec876475",
     "url": "/flatstack_project/static/media/slick.ced611da.eot"
   },
   {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/flatstack_project/static/media/slick.f97e3bbf.svg"
+  },
+  {
+    "revision": "d41f55a78e6f49a5512878df1737e58a",
+    "url": "/flatstack_project/static/media/slick.d41f55a7.ttf"
   },
   {
     "revision": "e4ab6a3c888c81049af6",
