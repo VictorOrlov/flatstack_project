@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import qs from 'qs';
+import { Link, Redirect } from 'react-router-dom';
 import PageTemplate from '../templates/PageTemplate';
 import styles from './styles/CharactersPage.module.css';
 
@@ -26,8 +27,8 @@ class CharactersPage extends Component {
         .get(`${process.env.REACT_APP_API_URL}/v1/public/characters`, {
           params: {
             apikey: process.env.REACT_APP_MARVEL_API_KEY,
-            limit: 20,
-            offset: (this.state.page - 1) * 20,
+            limit: 5,
+            offset: (this.state.page - 1) * 5,
           },
         })
         .then((response) => {
@@ -54,9 +55,11 @@ class CharactersPage extends Component {
 
     render() {
       const { loading, error, data } = this.state;
+
+
       return (
         <PageTemplate>
-          <div className="row justify-content-center">
+          <div className="row m-0 justify-content-center">
             <h1>Герои</h1>
             <div className="w-100" />
             {loading && 'Зарузка...'}

@@ -7,7 +7,7 @@ class CharPage extends Component {
   state = {
     loading: false,
     error: false,
-    data: [],
+    data: null,
   };
 
   componentDidMount() {
@@ -20,7 +20,7 @@ class CharPage extends Component {
     this.setState({
       loading: true,
       error: false,
-      data: [],
+      data: null,
     });
 
     axios
@@ -55,47 +55,50 @@ class CharPage extends Component {
           <button type="button" onClick={this.fetch}>Повторить загрузку</button>
         </div>
         )}
-        <main className={`${styles.main_style} row justify-content-center`}>
-          <div className="col-10 p-0">
-            <h1>
+        {data && (
+          <main className={`${styles.main_style} row justify-content-center`}>
+            <div className="col-10 p-0">
+              <h1>
                 Герой
-              {' '}
-              {data.name}
-            </h1>
-            <p>
-              <strong>Настоящее имя:</strong>
-              {' '}
-              {data.real_name}
-            </p>
-            <p>
-              <strong>Вид:</strong>
-              {' '}
-              {data.race}
-            </p>
-            <p>
-              <strong>Рост:</strong>
-              {' '}
-              {data.height}
-            </p>
-            <p>
-              <strong>Вес:</strong>
-              {' '}
-              {data.weight}
-            </p>
-          </div>
-          <div className={`${styles.hero_img} col-2 p-0`}>
-            {/* <img src={`${data.thumbnail.path}.${data.thumbnail.extension}`} alt="" /> */}
-          </div>
-          <hr />
-          <div className="col-12">
-            <h3>Способности</h3>
-            {data.abilities}
+                {' '}
+                {data.name}
+              </h1>
+              <p>
+                <strong>Настоящее имя:</strong>
+                {' '}
+                {data.real_name}
+              </p>
+              <p>
+                <strong>Вид:</strong>
+                {' '}
+                {data.race}
+              </p>
+              <p>
+                <strong>Рост:</strong>
+                {' '}
+                {data.height}
+              </p>
+              <p>
+                <strong>Вес:</strong>
+                {' '}
+                {data.weight}
+              </p>
+            </div>
+            <div className={`${styles.hero_img} col-2 p-0`}>
+              <img src={`${data.thumbnail.path}.${data.thumbnail.extension}`} alt="" />
+            </div>
             <hr />
-          </div>
-          <div className="col-12">
-            {data.short_story}
-          </div>
-        </main>
+            <div className="col-12">
+              <h3>Способности</h3>
+              {data.abilities}
+              <hr />
+            </div>
+            <div className="col-12">
+              {data.short_story}
+            </div>
+          </main>
+        )}
+
       </PageTemplate>
     );
   }

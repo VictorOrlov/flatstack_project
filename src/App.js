@@ -12,7 +12,7 @@ import CharPage from './pages/CharPage';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/flatstack_project">
         <Switch>
           <Route path="/" component={HomePage} exact />
           <Route path="/heroes" component={CharactersPage} exact />
