@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './styles/HeroesPage.module.css';
-import PageTemplate from '../templates/PageTemplate';
-import {allHeroes} from '../molecules/MapForSection';
+import styles from './HeroesPage.module.css';
+import PageTemplate from '../../templates/PageTemplate';
+import { allHeroes } from '../../molecules/MapForSection';
 
 const HeroesPage = () => (
   <PageTemplate>

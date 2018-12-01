@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import styles from './styles/RegistrationPage.module.css';
-import Input from '../atoms/input/index';
-import PageTemplate from '../templates/PageTemplate';
-import FormControl from '../atoms/FormControl';
-import Label from '../atoms/Label';
+import styles from './RegistrationPage.module.css';
+import Input from '../../atoms/input/index';
+import PageTemplate from '../../templates/PageTemplate';
+import FormControl from '../../atoms/FormControl';
+import Label from '../../atoms/Label';
 
 class RegistrationPage extends Component {
   initialState = {

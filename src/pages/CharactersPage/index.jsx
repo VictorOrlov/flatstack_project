@@ -1,24 +1,30 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import qs from 'qs';
-import { Link, Redirect } from 'react-router-dom';
-import PageTemplate from '../templates/PageTemplate';
-import styles from './styles/CharactersPage.module.css';
+import { Link } from 'react-router-dom';
+import PageTemplate from '../../templates/PageTemplate';
+import styles from './CharactersPage.module.css';
 
 class CharactersPage extends Component {
     state = {
       loading: false,
       error: false,
       data: [],
-      page: 1,
+      totalPage: 0,
     };
 
     componentDidMount() {
       this.fetch();
     }
 
+    // componentDidUpdate() {
+    // }
+
     fetch = () => {
+      const currentPage = qs.parse(this.props.location.search, { ignoreQueryPrefix: true });
+      console.log(currentPage.page);
       this.setState({
+        data: [],
         loading: true,
         error: false,
       });
@@ -28,14 +34,15 @@ class CharactersPage extends Component {
           params: {
             apikey: process.env.REACT_APP_MARVEL_API_KEY,
             limit: 5,
-            offset: (this.state.page - 1) * 5,
+            offset: (currentPage.page - 1) * 5,
           },
         })
         .then((response) => {
-          this.setState(prevState => ({
+          this.setState({
             loading: false,
-            data: [...prevState.data, ...response.data.data.results],
-          }));
+            data: response.data.data.results,
+            totalPage: response.data.data.total,
+          });
         })
         .catch(() => {
           this.setState({
@@ -45,18 +52,22 @@ class CharactersPage extends Component {
         });
     };
 
-    handleShowMore = () => {
-      this.setState(prevState => ({
-        page: prevState.page + 1,
-      }), () => {
-        this.fetch();
-      });
-    };
-
     render() {
       const { loading, error, data } = this.state;
-
-
+      const pageNumbers = [];
+      for (let i = 1; i <= Math.ceil(this.state.totalPage / 5); i++) {
+        pageNumbers.push(i);
+      }
+      const renderPageNumbers = pageNumbers.map(number => (
+        <li key={number} id={number}>
+          <Link
+            to={`/heroes/?page=${number}`}
+            className={styles.linkPaginate}
+          >
+            {number}
+          </Link>
+        </li>
+      ));
       return (
         <PageTemplate>
           <div className="row m-0 justify-content-center">
@@ -70,9 +81,9 @@ class CharactersPage extends Component {
               <button type="button" onClick={this.fetch}>Повторить загрузку</button>
             </div>
             )}
-            {data.map(character => (
+            { data.map(character => (
               <div className={`${styles.itemlist} col-2`} key={character.id}>
-                <Link to={`${'/heroes/'}${character.id}`}>
+                <Link to={`${'/hero/'}${character.id}`}>
                   <div className={styles.itemlist__img}>
                     <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt="" />
                   </div>
@@ -82,8 +93,9 @@ class CharactersPage extends Component {
                 </Link>
               </div>
             ))}
-            <div className="w-100" />
-            {!loading && !error && <button onClick={this.handleShowMore} className={styles.button} type="button">Показать ещё</button>}
+            <ul className={styles.paginate}>
+              {renderPageNumbers}
+            </ul>
           </div>
         </PageTemplate>
       );

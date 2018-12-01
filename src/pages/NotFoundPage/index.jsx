@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './styles/NotFoundPage.module.css';
-import BtnParall from '../atoms/BtnParall';
+import styles from './NotFoundPage.module.css';
+import BtnParall from '../../atoms/BtnParall';
 
 const NotFoundPage = () => (
   <main className={styles.main_style}>

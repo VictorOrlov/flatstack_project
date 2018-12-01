@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './styles/MoovesPage.module.css';
-import PageTemplate from '../templates/PageTemplate';
-import { mooveList } from '../molecules/MapForSection';
+import styles from './MoovesPage.module.css';
+import PageTemplate from '../../templates/PageTemplate';
+import { mooveList } from '../../molecules/MapForSection';
 
 const MoovesPage = () => (
   <PageTemplate>
