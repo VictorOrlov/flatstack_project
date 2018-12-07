@@ -2,10 +2,25 @@
   margin: 0;
   padding: 20px 20px;
 }
+.hero_desc{
+  height: 200px;
+  text-align: center;
+  padding: 40px !important;
+}
+.hero_desc>h1{
+  
+}
 .hero_img{
   display: block;
+  height: 300px;
 }
 .hero_img>img{
   height: 100%;
   width: 100%;
+}
+.hero_dossier>h1{
+text-align: center;
+}
+.btn_margin{
+  margin: 10px 0 10px 0 !important;
 }

@@ -17,12 +17,15 @@ class CharactersPage extends Component {
       this.fetch();
     }
 
-    // componentDidUpdate() {
-    // }
+
+    componentDidUpdate(pervProps) {
+      if (pervProps.location !== this.props.location) {
+        return this.fetch();
+      }
+    }
 
     fetch = () => {
       const currentPage = qs.parse(this.props.location.search, { ignoreQueryPrefix: true });
-      console.log(currentPage.page);
       this.setState({
         data: [],
         loading: true,
@@ -33,8 +36,8 @@ class CharactersPage extends Component {
         .get(`${process.env.REACT_APP_API_URL}/v1/public/characters`, {
           params: {
             apikey: process.env.REACT_APP_MARVEL_API_KEY,
-            limit: 5,
-            offset: (currentPage.page - 1) * 5,
+            limit: 30,
+            offset: (currentPage.page - 1) * 30,
           },
         })
         .then((response) => {
@@ -53,16 +56,19 @@ class CharactersPage extends Component {
     };
 
     render() {
-      const { loading, error, data } = this.state;
+      const {
+        loading, error, data, totalPage,
+      } = this.state;
+
       const pageNumbers = [];
-      for (let i = 1; i <= Math.ceil(this.state.totalPage / 5); i++) {
+      for (let i = 1; i <= Math.ceil((totalPage / 2) / 30); i++) {
         pageNumbers.push(i);
       }
       const renderPageNumbers = pageNumbers.map(number => (
-        <li key={number} id={number}>
+        <li key={number} id={number} className="page-item">
           <Link
             to={`/heroes/?page=${number}`}
-            className={styles.linkPaginate}
+            className="page-link"
           >
             {number}
           </Link>
@@ -93,9 +99,11 @@ class CharactersPage extends Component {
                 </Link>
               </div>
             ))}
-            <ul className={styles.paginate}>
-              {renderPageNumbers}
-            </ul>
+            <div className="col-12">
+              <ul className={`${styles.paginate} pagination`}>
+                {renderPageNumbers}
+              </ul>
+            </div>
           </div>
         </PageTemplate>
       );

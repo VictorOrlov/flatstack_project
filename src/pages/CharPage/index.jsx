@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styles from './CharPage.module.css';
 import PageTemplate from '../../templates/PageTemplate';
+import BtnParall from '../../atoms/BtnParall';
 
 class CharPage extends Component {
   state = {
     loading: false,
     error: false,
     data: null,
+    showComicsList: false,
+    showHistList: false,
   };
 
   componentDidMount() {
@@ -43,8 +46,22 @@ class CharPage extends Component {
       });
   };
 
+  comicsOnClick = () => {
+    this.setState(prevState => ({
+      showComicsList: !prevState.showComicsList,
+    }));
+  };
+
+  histOnClick = () => {
+    this.setState(prevState => ({
+      showHistList: !prevState.showHistList,
+    }));
+  };
+
   render() {
-    const { loading, error, data } = this.state;
+    const {
+      loading, error, data, showComicsList, showHistList,
+    } = this.state;
     return (
       <PageTemplate>
         {loading && 'Зарузка...'}
@@ -56,45 +73,75 @@ class CharPage extends Component {
         </div>
         )}
         {data && (
+
           <main className={`${styles.main_style} row justify-content-center`}>
-            <div className="col-10 p-0">
+            <div className={`${styles.hero_img} col-3 p-0`}>
+              <img src={`${data.thumbnail.path}.${data.thumbnail.extension}`} alt="" />
+            </div>
+            <div className={`${styles.hero_desc} col-9`}>
+              {console.log(data)}
               <h1>
-                Герой
+                Герой:
                 {' '}
                 {data.name}
               </h1>
-              <p>
-                <strong>Настоящее имя:</strong>
-                {' '}
-                {data.real_name}
-              </p>
-              <p>
-                <strong>Вид:</strong>
-                {' '}
-                {data.race}
-              </p>
-              <p>
-                <strong>Рост:</strong>
-                {' '}
-                {data.height}
-              </p>
-              <p>
-                <strong>Вес:</strong>
-                {' '}
-                {data.weight}
-              </p>
-            </div>
-            <div className={`${styles.hero_img} col-2 p-0`}>
-              <img src={`${data.thumbnail.path}.${data.thumbnail.extension}`} alt="" />
-            </div>
-            <hr />
-            <div className="col-12">
-              <h3>Способности</h3>
-              {data.abilities}
+              {data.description && (
+                <p>
+                  <strong>Данные о объекте - </strong>
+                  {data.description}
+                </p>
+              )}
+              {' '}
+              {!data.description && (<p><strong>Нет данных!!! Объект не засвечен.</strong></p>)}
               <hr />
             </div>
-            <div className="col-12">
-              {data.short_story}
+            <hr />
+            <div className={`${styles.hero_dossier} col-12`}>
+              <h1> Досье: </h1>
+              <div className={styles.btn_margin}>
+                <BtnParall
+                  link="#"
+                  click={this.comicsOnClick}
+                >
+                  {showComicsList ? 'Скрыть список' : 'Показать список Комиксов с участием этого героя'}
+                </BtnParall>
+              </div>
+              <div className="col-10">
+                {showComicsList && (
+                  <span>
+                    <h3>Список комиксов</h3>
+                    <ul>
+                      {data.comics.items.map(comics => (
+                        <li key={comics.name}>
+                          {comics.name}
+                        </li>
+                      ))}
+                    </ul>
+                  </span>
+                )}
+              </div>
+              <div className={styles.btn_margin}>
+                <BtnParall
+                  link="#"
+                  click={this.histOnClick}
+                >
+                  {showHistList ? 'Скрыть список' : 'Показать список Иссторий с участием этого героя'}
+                </BtnParall>
+              </div>
+              <div className="col-10">
+                {showHistList && (
+                  <span>
+                    <h3>Список иссторий</h3>
+                    <ul>
+                      {data.stories.items.map(stories => (
+                        <li key={stories.name}>
+                          {stories.name}
+                        </li>
+                      ))}
+                    </ul>
+                  </span>
+                )}
+              </div>
             </div>
           </main>
         )}
