@@ -26,8 +26,10 @@ class CharPage extends Component {
       data: null,
     });
 
+    const { match } = this.props;
+
     axios
-      .get(`${process.env.REACT_APP_API_URL}/v1/public/characters/${this.props.match.params.id}`, {
+      .get(`${process.env.REACT_APP_API_URL}/v1/public/characters/${match.params.id}`, {
         params: {
           apikey: process.env.REACT_APP_MARVEL_API_KEY,
         },
@@ -62,6 +64,7 @@ class CharPage extends Component {
     const {
       loading, error, data, showComicsList, showHistList,
     } = this.state;
+    // const comicsUrl = "nnjnj";
     return (
       <PageTemplate>
         {loading && 'Зарузка...'}
@@ -79,7 +82,8 @@ class CharPage extends Component {
               <img src={`${data.thumbnail.path}.${data.thumbnail.extension}`} alt="" />
             </div>
             <div className={`${styles.hero_desc} col-9`}>
-              {console.log(data)}
+              {console.log(data.comics.items[0].resourceURI.match(/[^\/]+$/)[0])}
+
               <h1>
                 Герой:
                 {' '}

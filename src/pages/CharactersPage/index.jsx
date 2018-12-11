@@ -19,13 +19,16 @@ class CharactersPage extends Component {
 
 
     componentDidUpdate(pervProps) {
-      if (pervProps.location !== this.props.location) {
+      const { location } = this.props;
+      if (pervProps.location !== location) {
         return this.fetch();
       }
+      return null;
     }
 
     fetch = () => {
-      const currentPage = qs.parse(this.props.location.search, { ignoreQueryPrefix: true });
+      const { location } = this.props;
+      const currentPage = qs.parse(location.search, { ignoreQueryPrefix: true });
       this.setState({
         data: [],
         loading: true,
