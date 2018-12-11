@@ -17,3 +17,12 @@
 .btn_container{
   margin-left: 300px;
 }
+@media (max-width: 600px){
+  .trailer_adv{
+    width: 100%;
+    margin: 0 !important;
+  }
+  .btn_container{
+    margin-left: 40% !important;
+  }
+}

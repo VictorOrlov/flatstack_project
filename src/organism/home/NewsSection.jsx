@@ -3,7 +3,9 @@ import Sections from '../../molecules/Sections';
 import { newsList } from '../../molecules/MapForSection';
 
 const NewsSection = () => (
-  <Sections title="Новости">{newsList}</Sections>
+  <span>
+    <Sections title="Новости (не кликабельно)">{newsList}</Sections>
+  </span>
 );
 
 export default NewsSection;
