@@ -78,11 +78,11 @@ class CharPage extends Component {
         {data && (
 
           <main className={`${styles.main_style} row justify-content-center`}>
-            <div className={`${styles.hero_img} col-3 p-0`}>
+            <div className={`${styles.hero_img} col-10 col-sm-3 p-0`}>
               <img src={`${data.thumbnail.path}.${data.thumbnail.extension}`} alt="" />
             </div>
-            <div className={`${styles.hero_desc} col-9`}>
-              {console.log(data.comics.items[0].resourceURI.match(/[^\/]+$/)[0])}
+            <div className={`${styles.hero_desc} col-10 col-sm-9`}>
+              {/* {console.log(data.comics.items[0].resourceURI.match(/[^\/]+$/)[0])} */}
 
               <h1>
                 Герой:
@@ -138,7 +138,7 @@ class CharPage extends Component {
                     <h3>Список иссторий</h3>
                     <ul>
                       {data.stories.items.map(stories => (
-                        <li key={stories.name}>
+                        <li key={stories.resourceURI}>
                           {stories.name}
                         </li>
                       ))}

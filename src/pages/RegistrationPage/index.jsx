@@ -47,7 +47,7 @@ class RegistrationPage extends Component {
   render() {
     return (
       <PageTemplate>
-        <main className={`${styles.main} row justify-content-center`}>
+        <main className={`${styles.main} row justify-content-center m-0`}>
           <form onSubmit={this.handleSubmit}>
             <FormControl>
               <Label htmlFor="email">Почта</Label>

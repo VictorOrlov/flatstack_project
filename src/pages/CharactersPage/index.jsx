@@ -91,7 +91,7 @@ class CharactersPage extends Component {
             </div>
             )}
             { data.map(character => (
-              <div className={`${styles.itemlist} col-2`} key={character.id}>
+              <div className={`${styles.itemlist} col-10 col-sm-2`} key={character.id}>
                 <Link to={`${'/hero/'}${character.id}`}>
                   <div className={styles.itemlist__img}>
                     <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt="" />

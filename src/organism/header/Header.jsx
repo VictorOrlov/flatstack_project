@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css';
+import marvelStudios from '../../img/header/marvel_studios.jpg';
+import avengersLogo from '../../img/header/avengers_logo.png';
+import styles from './Header.module.css';
 
 const Header = () => (
   <header className="">
-    <div className="header_content">
-      <div className="header_image">
-        <img src={require('../../img/header/marvel_studios.jpg')} alt="" />
+    <div className={`${styles.header_content}`}>
+      <div className={`${styles.header_image}`}>
+        <img src={marvelStudios} alt="" />
       </div>
-      <div className="header_bar">
+      <div className={`${styles.header_bar}`}>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <span className="navbar-brand">
-            <img src={require('../../img/header/avengers_logo.png')} style={{ height: 50, width: 60 }} alt="" />
+            <img src={avengersLogo} style={{ height: 50, width: 60 }} alt="" />
           </span>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
@@ -36,9 +38,11 @@ const Header = () => (
                 <Link className="nav-link" to="/fgds">Новости</Link>
               </li>
             </ul>
-            <span className="nav-item">
-              <Link className="nav-link" to="/registration">Регистрация</Link>
-            </span>
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link" to="/registration">Регистрация</Link>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>

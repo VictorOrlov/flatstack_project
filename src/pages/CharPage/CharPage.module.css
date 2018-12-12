@@ -5,10 +5,10 @@
 .hero_desc{
   height: 200px;
   text-align: center;
-  padding: 40px !important;
+  padding: 40px 0 !important;
 }
 .hero_desc>h1{
-  
+  width: 100% !important;
 }
 .hero_img{
   display: block;
