@@ -1,7 +1,7 @@
 {
-  "main.css": "/flatstack_project/static/css/main.177f0296.chunk.css",
-  "main.js": "/flatstack_project/static/js/main.553a7033.chunk.js",
-  "main.js.map": "/flatstack_project/static/js/main.553a7033.chunk.js.map",
+  "main.css": "/flatstack_project/static/css/main.377a1166.chunk.css",
+  "main.js": "/flatstack_project/static/js/main.f0bdcff6.chunk.js",
+  "main.js.map": "/flatstack_project/static/js/main.f0bdcff6.chunk.js.map",
   "static/css/1.26fa940b.chunk.css": "/flatstack_project/static/css/1.26fa940b.chunk.css",
   "static/js/1.4477d725.chunk.js": "/flatstack_project/static/js/1.4477d725.chunk.js",
   "static/js/1.4477d725.chunk.js.map": "/flatstack_project/static/js/1.4477d725.chunk.js.map",
@@ -63,9 +63,9 @@
   "static/media/NotFoundPage.module.css": "/flatstack_project/static/media/Not_Found.333269d9.jpg",
   "static/media/RegistrationPage.module.css": "/flatstack_project/static/media/registration.e737b124.jpg",
   "static/media/slick-theme.css": "/flatstack_project/static/media/slick.f97e3bbf.svg",
-  "static/css/main.177f0296.chunk.css.map": "/flatstack_project/static/css/main.177f0296.chunk.css.map",
+  "static/css/main.377a1166.chunk.css.map": "/flatstack_project/static/css/main.377a1166.chunk.css.map",
   "static/css/1.26fa940b.chunk.css.map": "/flatstack_project/static/css/1.26fa940b.chunk.css.map",
   "index.html": "/flatstack_project/index.html",
-  "precache-manifest.b983cb82923ae04196f78c983ee7468a.js": "/flatstack_project/precache-manifest.b983cb82923ae04196f78c983ee7468a.js",
+  "precache-manifest.bed24f35e66629aa5d2fc7a632797773.js": "/flatstack_project/precache-manifest.bed24f35e66629aa5d2fc7a632797773.js",
   "service-worker.js": "/flatstack_project/service-worker.js"
 }
