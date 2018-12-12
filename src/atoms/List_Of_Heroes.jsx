@@ -17,61 +17,61 @@ export const heroes = [
   {
     id: 'starlord',
     hero_name: 'Звездный Лорд',
-    img: starlord
-  },{
+    img: starlord,
+  }, {
     id: 'raketa',
     hero_name: 'Ракета',
-    img: raketa
-  },{
+    img: raketa,
+  }, {
     id: 'grut',
     hero_name: 'Грут',
-    img: grut
-  },{
+    img: grut,
+  }, {
     id: 'gamora',
     hero_name: 'Гамора',
-    img: gamora
-  },{
+    img: gamora,
+  }, {
     id: 'draks',
     hero_name: 'Дракс',
-    img: draks
-  }
+    img: draks,
+  },
 ];
-export const more_heroes = [
+export const moreHEroes = [
   {
     id: 'spidy',
     hero_name: 'Человек-Пук',
-    img: spidy
-  },{
+    img: spidy,
+  }, {
     id: 'ironman',
     hero_name: 'Железный-человек',
-    img: ironman
-  },{
+    img: ironman,
+  }, {
     id: 'hulk',
     hero_name: 'Халк',
-    img: hulk
-  },{
+    img: hulk,
+  }, {
     id: 'tor',
     hero_name: 'Тор',
-    img: tor
-  },{
+    img: tor,
+  }, {
     id: 'capitan',
     hero_name: 'Капитан Америка',
-    img: capitan
-  },{
+    img: capitan,
+  }, {
     id: 'redhead',
     hero_name: 'Чёрная Вдова',
-    img: redhead
-  },{
+    img: redhead,
+  }, {
     id: 'ant',
     hero_name: 'Человек-Муравей',
-    img: ant
-  },{
+    img: ant,
+  }, {
     id: 'socol',
     hero_name: 'Соколинный Глаз',
-    img: socol
-  },{
+    img: socol,
+  }, {
     id: 'strange',
     hero_name: 'Доктор Стрэндж',
-    img: strange
-  }
+    img: strange,
+  },
 ];

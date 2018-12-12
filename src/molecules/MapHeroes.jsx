@@ -1,5 +1,5 @@
 import React from 'react';
-import { heroes, more_heroes } from '../atoms/List_Of_Heroes';
+import { heroes, moreHEroes } from '../atoms/List_Of_Heroes';
 import styles from './MapHeroes.module.css';
 
 function mapHeroes(e) {
@@ -9,10 +9,9 @@ function mapHeroes(e) {
         <img src={hero.img} alt="" />
       </div>
       <span className={styles.herolist__name}>{hero.hero_name}</span>
-    </div>),
-  );
+    </div>));
 }
 
 
 export const firstHeroes = mapHeroes(heroes);
-export const moreHeroes = mapHeroes(more_heroes);
+export const moreHeroes = mapHeroes(moreHEroes);

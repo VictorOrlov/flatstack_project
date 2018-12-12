@@ -24,7 +24,6 @@ const Header = () => (
               <li className="nav-item ">
                 <Link className="nav-link" to="/">
                       Главная
-                  {' '}
                   <span className="sr-only">(current)</span>
                 </Link>
               </li>
