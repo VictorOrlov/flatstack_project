@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/flatstack_project/precache-manifest.03ada4030b0dbc9dadfbde1f279fb90d.js"
+  "/flatstack_project/precache-manifest.b983cb82923ae04196f78c983ee7468a.js"
 );
 
 workbox.clientsClaim();
