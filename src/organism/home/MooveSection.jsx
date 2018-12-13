@@ -5,7 +5,7 @@ import { mooveList } from '../../molecules/MapForSection';
 
 const MooveSection = () => (
   <span>
-    <Sections title="Фильмы">{mooveList}</Sections>
+    <Sections title="Фильмы (не кликабельно)">{mooveList}</Sections>
     <div className="row justify-content-center m-0 d-flex d-md-none">
       <div className="col-10">
         <hr />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MapForSection.module.css';
-import { mooves } from '../atoms/List_Of_Mooves';
+import  mooves  from '../atoms/List_Of_Mooves';
 import news from '../atoms/List_Of_News';
 import { marvelHeroes } from '../atoms/hero_page_List';
 

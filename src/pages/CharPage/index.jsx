@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import styles from './CharPage.module.css';
 import PageTemplate from '../../templates/PageTemplate';
 import BtnParall from '../../atoms/BtnParall';
@@ -64,7 +65,6 @@ class CharPage extends Component {
     const {
       loading, error, data, showComicsList, showHistList,
     } = this.state;
-    // const comicsUrl = "nnjnj";
     return (
       <PageTemplate>
         {loading && 'Зарузка...'}
@@ -154,5 +154,16 @@ class CharPage extends Component {
     );
   }
 }
+CharPage.defaultProps = {
+  match: {},
+};
+
+CharPage.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  }),
+};
 
 export default CharPage;

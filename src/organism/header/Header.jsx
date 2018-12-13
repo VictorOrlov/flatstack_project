@@ -34,7 +34,7 @@ const Header = () => (
                 <Link className="nav-link" to="/films">Фильмы</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/fgds">Новости</Link>
+                <span className="nav-link disabled">Новости</span>
               </li>
             </ul>
             <ul className="navbar-nav">

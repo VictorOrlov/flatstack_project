@@ -1,11 +1,11 @@
 .main_style{
   margin: 0;
-  padding: 20px 20px;
 }
 .hero_desc{
-  height: 200px;
+  /* height: 200px; */
   text-align: center;
   padding: 40px 0 !important;
+  padding-left: 10px !important;
 }
 .hero_desc>h1{
   width: 100% !important;
@@ -22,5 +22,5 @@
 text-align: center;
 }
 .btn_margin{
-  margin: 10px 0 10px 0 !important;
+  margin: 10px auto 10px auto !important;
 }

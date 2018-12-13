@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styles from './RegistrationPage.module.css';
 import Input from '../../atoms/input/index';
 import PageTemplate from '../../templates/PageTemplate';
@@ -45,6 +46,7 @@ class RegistrationPage extends Component {
   };
 
   render() {
+    const { email, password, passwordRepeat } = this.state;
     return (
       <PageTemplate>
         <main className={`${styles.main} row justify-content-center m-0`}>
@@ -53,7 +55,7 @@ class RegistrationPage extends Component {
               <Label htmlFor="email">Почта</Label>
               <Input
                 type="email"
-                value={this.state.email}
+                value={email}
                 id="email"
                 name="email"
                 placeholder="Введите E-mail"
@@ -66,7 +68,7 @@ class RegistrationPage extends Component {
                 type="password"
                 name="password"
                 id="password"
-                value={this.state.password}
+                value={password}
                 placeholder="Введите пароль"
                 onChange={this.handlePasswordChange}
               />
@@ -77,7 +79,7 @@ class RegistrationPage extends Component {
                 type="password"
                 name="passwordRepeat"
                 id="passwordRepeat"
-                value={this.state.passwordRepeat}
+                value={passwordRepeat}
                 placeholder="passwordRepeat"
                 onChange={this.handlePasswordChange}
               />
@@ -89,4 +91,15 @@ class RegistrationPage extends Component {
     );
   }
 }
+RegistrationPage.defaultProps = {
+  email: 'email',
+  password: 'password',
+  passwordRepeat: 'passwordRepeat',
+};
+
+RegistrationPage.propTypes = {
+  email: PropTypes.string,
+  password: PropTypes.string,
+  passwordRepeat: PropTypes.string,
+};
 export default RegistrationPage;

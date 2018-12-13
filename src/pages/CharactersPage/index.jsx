@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import qs from 'qs';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import PageTemplate from '../../templates/PageTemplate';
 import styles from './CharactersPage.module.css';
 
@@ -112,5 +113,14 @@ class CharactersPage extends Component {
       );
     }
 }
+CharactersPage.defaultProps = {
+  location: {},
+};
+
+CharactersPage.propTypes = {
+  location: PropTypes.shape({
+    search: PropTypes.string.isRequired,
+  }),
+};
 
 export default CharactersPage;
