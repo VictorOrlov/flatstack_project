@@ -87,7 +87,7 @@ export const marvelHeroes = [
     img: strange,
   },
 ];
-const heroes_for_ThisHeroPage = {
+const heroesForThisHeroPage = {
   starlord: {
     name: 'Звездный Лорд',
     real_name: 'Питер Джейсон Квилл',
@@ -1073,4 +1073,4 @@ const heroes_for_ThisHeroPage = {
   },
 };
 
-export default heroes_for_ThisHeroPage;
+export default heroesForThisHeroPage;

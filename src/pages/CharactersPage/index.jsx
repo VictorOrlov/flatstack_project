@@ -103,8 +103,8 @@ class CharactersPage extends Component {
                 </Link>
               </div>
             ))}
-            <div className="col-12">
-              <ul className={`${styles.paginate} pagination`}>
+            <div className={`${styles.pagList} col-12`}>
+              <ul className={`${styles.paginate}`}>
                 {renderPageNumbers}
               </ul>
             </div>

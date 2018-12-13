@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { heroes, moreHEroes } from '../atoms/List_Of_Heroes';
 import styles from './MapHeroes.module.css';
 
 function mapHeroes(e) {
   return e.map(hero => (
     <div className={`${styles.herolist} col-2`} key={hero.id}>
-      <div className={styles.herolist__img}>
-        <img src={hero.img} alt="" />
-      </div>
-      <span className={styles.herolist__name}>{hero.hero_name}</span>
+      <Link to={hero.link}>
+        <div className={styles.herolist__img}>
+          <img src={hero.img} alt="" />
+        </div>
+        <span className={styles.herolist__name}>{hero.hero_name}</span>
+      </Link>
     </div>));
 }
 

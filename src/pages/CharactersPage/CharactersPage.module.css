@@ -37,6 +37,20 @@
   color: rgb(240, 27, 12);
 }
 
+.pagList{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.paginate{
+  margin: 0;
+  padding: 4px;
+}
+.paginate>li{
+  display: inline-block;
+}
+
 /* button */
 .button {
   background:rgb(247, 14, 14);

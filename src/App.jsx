@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from './pages/HomePage/index';
 // import HeroesPage from './pages/HeroesPage';
-// import ThisHeroPage from './pages/ThisHeroPage';
+import ThisHeroPage from './pages/Reserve/ThisHeroPage';
 import MoovesPage from './pages/MoovesPage/index';
 import NotFoundPage from './pages/NotFoundPage/index';
 import RegistrationPage from './pages/RegistrationPage/index';
@@ -17,6 +17,7 @@ const App = () => (
       <Route path="/hero/:id" component={CharPage} />
       <Route path="/films" component={MoovesPage} exact />
       <Route path="/registration" component={RegistrationPage} exact />
+      <Route path="/old_version_hero/:id" component={ThisHeroPage} />
       <Route component={NotFoundPage} />
     </Switch>
   </BrowserRouter>
