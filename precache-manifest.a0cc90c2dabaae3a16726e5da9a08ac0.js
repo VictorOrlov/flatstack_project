@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/flatstack_project/static/media/hulk.0f784fe7.png"
   },
   {
-    "revision": "905c6e1044f7b3780390",
-    "url": "/flatstack_project/static/css/main.fe0f90cd.chunk.css"
+    "revision": "c5498be62bed746d66ff",
+    "url": "/flatstack_project/static/css/main.9ca8a632.chunk.css"
   },
   {
-    "revision": "f97e3bbf73254b0112091d0192f17aec",
-    "url": "/flatstack_project/static/media/slick.f97e3bbf.svg"
+    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
+    "url": "/flatstack_project/static/media/slick.b7c9e1e4.woff"
   },
   {
-    "revision": "4477d7250254615c81a0",
-    "url": "/flatstack_project/static/js/1.4477d725.chunk.js"
+    "revision": "3189563aee59a4a8124e",
+    "url": "/flatstack_project/static/js/1.3189563a.chunk.js"
   },
   {
     "revision": "6f18bf657afe3fdae50b",
@@ -132,8 +132,8 @@ self.__precacheManifest = [
     "url": "/flatstack_project/static/media/ironman.79dde705.png"
   },
   {
-    "revision": "905c6e1044f7b3780390",
-    "url": "/flatstack_project/static/js/main.905c6e10.chunk.js"
+    "revision": "c5498be62bed746d66ff",
+    "url": "/flatstack_project/static/js/main.c5498be6.chunk.js"
   },
   {
     "revision": "ad6a0af5c84df00bdc1f13d72407631a",
@@ -256,15 +256,15 @@ self.__precacheManifest = [
     "url": "/flatstack_project/static/media/slick.d41f55a7.ttf"
   },
   {
-    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
-    "url": "/flatstack_project/static/media/slick.b7c9e1e4.woff"
+    "revision": "f97e3bbf73254b0112091d0192f17aec",
+    "url": "/flatstack_project/static/media/slick.f97e3bbf.svg"
   },
   {
-    "revision": "4477d7250254615c81a0",
-    "url": "/flatstack_project/static/css/1.26fa940b.chunk.css"
+    "revision": "3189563aee59a4a8124e",
+    "url": "/flatstack_project/static/css/1.bf0e2673.chunk.css"
   },
   {
-    "revision": "63f868bbd11b15739239c6abae912912",
+    "revision": "39d19c51fd9ca26149b43a6480552eab",
     "url": "/flatstack_project/index.html"
   }
 ];
